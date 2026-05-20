@@ -3,15 +3,170 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page Name — Bearing Witness</title>
+  <title>Resources — Bearing Witness</title>
   <link rel="stylesheet" href="styles/styles.css" />
+
+  <style>
+    .resources-page {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .resources-page h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      margin-bottom: 18px;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+    }
+
+    .resources-intro {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      opacity: 0.8;
+      margin-bottom: 42px;
+      max-width: 760px;
+    }
+
+    .resource-list {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .resource-card {
+      padding: 28px 30px;
+      border: 3px solid currentColor;
+      border-radius: 22px;
+      box-shadow: 8px 8px 0 currentColor;
+      transition:
+        transform 180ms ease,
+        box-shadow 180ms ease;
+    }
+
+    .resource-card:hover {
+      transform: translate(4px, 4px);
+      box-shadow: 4px 4px 0 currentColor;
+    }
+
+    .resource-link {
+      display: inline-block;
+      margin-bottom: 14px;
+      font-size: clamp(1.45rem, 3vw, 2.5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .resource-link:hover {
+      opacity: 0.75;
+    }
+
+    .resource-description {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      line-height: 1.7;
+      opacity: 0.82;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
 
   <!-- copy your sidebar <aside> and toggle <button> from index.html -->
 
   <main class="main-content" style="display:block; overflow-y:auto;">
-    <!-- your page content here -->
+    <section class="resources-page">
+      <h1>Resources</h1>
+
+      <p class="resources-intro">
+        Explore museums, historical archives, cultural centers, and educational organizations
+        connected to Jewish history, Holocaust memory, and Polish Jewish life.
+      </p>
+
+      <div class="resource-list">
+
+        <article class="resource-card">
+          <a class="resource-link" href="https://www.polin.pl/pl" target="_blank" rel="noopener noreferrer">
+            POLIN Museum
+          </a>
+          <p class="resource-description">
+            The POLIN Museum of the History of Polish Jews is a museum in Poland, located in the former Warsaw ghetto,
+            dedicated to preserving the 1,000-year history of Jewish life in Poland through interactive exhibits,
+            education, and cultural dialogue. The museum aims to promote historical understanding, remembrance,
+            and mutual respect while confronting antisemitism and discrimination.
+          </p>
+        </article>
+
+        <article class="resource-card">
+          <a class="resource-link" href="https://artsandculture.google.com/story/DwWxB806kgoA8A" target="_blank" rel="noopener noreferrer">
+            1,000 Years of History of Polish Jews
+          </a>
+          <p class="resource-description">
+            The core exhibition is a journey through the 1,000-year history of Polish Jews. Discover how Jews first
+            arrived in Polish lands, why they stayed, and how Poland became home to one of the largest Jewish
+            communities in the world.
+          </p>
+        </article>
+
+        <article class="resource-card">
+          <a class="resource-link" href="https://www.auschwitz.org" target="_blank" rel="noopener noreferrer">
+            Auschwitz Museum
+          </a>
+          <p class="resource-description">
+            Auschwitz-Birkenau was the largest Nazi concentration and extermination camp complex during World War II,
+            where over one million people, mostly Jews, were murdered during the Holocaust. Today, the Auschwitz-Birkenau
+            Memorial and Museum preserves the camp to educate visitors about the horrors of the Holocaust and honor the
+            memory of its victims.
+          </p>
+        </article>
+
+        <article class="resource-card">
+          <a class="resource-link" href="https://www.friendsofjcckrakow.org/visit-us" target="_blank" rel="noopener noreferrer">
+            JCC of Krakow
+          </a>
+          <p class="resource-description">
+            The JCC is a modern-day Jewish Community Center in Krakow. It helps individuals impacted by the Holocaust
+            through community service, supplies such as food, and provides a place for Jewish culture and life. It also
+            currently helps Ukrainian refugees impacted by the Russo-Ukrainian War.
+          </p>
+        </article>
+
+        <article class="resource-card">
+          <a class="resource-link" href="https://muzeumkrakowa.pl/oddzialy/fabryka-emalia-oskara-schindlera" target="_blank" rel="noopener noreferrer">
+            Schindler’s Factory
+          </a>
+          <p class="resource-description">
+            Oskar Schindler was a Nazi official who helped over a thousand Jews escape death. His factory is now a
+            modern exhibit that teaches visitors about Krakow during World War II and remembers his actions and legacy.
+          </p>
+        </article>
+
+        <article class="resource-card">
+          <a class="resource-link" href="https://dialog.org.pl/en/" target="_blank" rel="noopener noreferrer">
+            Forum for Dialogue
+          </a>
+          <p class="resource-description">
+            The Forum for Dialogue works to preserve sites of Jewish significance in Poland so that their history within
+            the nation is not erased. They also help show people in Poland the rich Jewish history that has existed there
+            and create modern-day connections between Jewish people and Polish people.
+          </p>
+        </article>
+
+        <article class="resource-card">
+          <a class="resource-link" href="https://www.majdanek.eu" target="_blank" rel="noopener noreferrer">
+            Majdanek Museum
+          </a>
+          <p class="resource-description">
+            Majdanek was a Nazi concentration and extermination camp located near Lublin, Poland, that operated from
+            1941 to 1944 during World War II. Today, the campgrounds, barracks, gas chambers, and memorials are preserved
+            to educate visitors about the Holocaust and honor the victims who suffered and died there.
+          </p>
+        </article>
+
+      </div>
+    </section>
   </main>
 
   <script src="scripts/sidebar.js?v=2"></script>

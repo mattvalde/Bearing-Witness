@@ -5,6 +5,9 @@
 
 
 /* ── 1. RESET ───────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -581,12 +584,12 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
 }
 
 .story-page-title {
-  min-height: 48vh;
+  min-height: 28vh;
   display: flex;
   align-items: end;
   max-width: 1040px;
   margin: 0 auto;
-  padding: 9vh 1.5rem 4rem;
+  padding: 4.5vh 1.5rem 2.6rem;
   color: #ffffff;
   font-size: clamp(3.2rem, 9vw, 8rem);
   font-weight: 560;
@@ -701,12 +704,13 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
 .action-scroll {
   width: min(1220px, calc(100% - 3rem));
   margin: 0 auto;
-  padding: 0 0 18vh;
+  padding: 0 0 12vh;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: minmax(380px, 36%);
   gap: 1rem;
   overflow-x: auto;
+  overflow-y: hidden;
   overscroll-behavior-inline: contain;
   scroll-snap-type: x mandatory;
 }
@@ -751,18 +755,20 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
 }
 
 .reveal-bubble {
-  opacity: 0.28;
-  transform: translateY(34px) scale(0.985);
-  filter: blur(3px);
+  opacity: 0;
+  transform: translate3d(0, 24px, 0) scale(0.99);
+  filter: blur(2px);
   transition:
-    opacity 620ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 620ms cubic-bezier(0.22, 1, 0.36, 1),
-    filter 620ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform, filter;
+  backface-visibility: hidden;
 }
 
 .reveal-bubble.is-visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
   filter: blur(0);
 }
 
@@ -1378,8 +1384,8 @@ body.landing-page::before {
 
 @media (max-width: 760px) {
   .story-page-title {
-    min-height: 38vh;
-    padding: 7vh 1rem 2.4rem;
+    min-height: 24vh;
+    padding: 3.5vh 1rem 1.8rem;
     font-size: clamp(2.7rem, 15vw, 4.8rem);
     letter-spacing: -0.02em;
   }

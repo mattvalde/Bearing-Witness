@@ -19,7 +19,7 @@
     { label: 'About Us',      href: 'about.html'      },
     { label: 'Our Journey',   href: 'ourjourney.html' },
     { label: 'Our Cause',     href: 'cause.html'      },
-    { label: 'Meet Adam',     href: 'adam.html'      },
+    // { label: 'Meet Adam',     href: 'adam.html'      },
     { label: 'Resources',     href: 'resources.html'  },
     { label: 'Image Gallery', href: 'gallery.html'    },
     { label: 'What Can I Do?', href: 'what-can-i-do.html' },

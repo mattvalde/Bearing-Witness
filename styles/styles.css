@@ -694,6 +694,57 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
   border-radius: 16px;
 }
 
+.action-page {
+  min-height: 100vh;
+}
+
+.action-scroll {
+  width: min(1180px, calc(100% - 3rem));
+  margin: 0 auto;
+  padding: 0 0 18vh;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(320px, 42%);
+  gap: 1rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x mandatory;
+}
+
+.action-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.action-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.action-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+}
+
+.action-card {
+  min-height: clamp(340px, 42vh, 520px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.action-card--accent {
+  background: rgba(47, 134, 246, 0.18);
+  border-color: rgba(143, 197, 255, 0.36);
+}
+
+.action-card h2 {
+  color: var(--accent);
+  font-size: clamp(1.7rem, 3.5vw, 3rem);
+  font-weight: 560;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
 .reveal-bubble {
   opacity: 0.28;
   transform: translateY(34px) scale(0.985);
@@ -1371,6 +1422,16 @@ body.landing-page::before {
   .story-image-bubble,
   .story-image-pair .story-image-bubble {
     min-height: 230px;
+  }
+
+  .action-scroll {
+    width: min(100% - 1.7rem, 520px);
+    padding-bottom: 12vh;
+    grid-auto-columns: minmax(260px, 86%);
+  }
+
+  .action-card {
+    min-height: 360px;
   }
 
   .landing-screen {

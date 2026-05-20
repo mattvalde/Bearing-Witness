@@ -21,7 +21,7 @@
     { label: 'Our Cause',     href: 'cause.html'      },
     { label: 'Resources',     href: 'resources.html'  },
     { label: 'Image Gallery', href: 'gallery.html'    },
-    { label: 'What Can I Do?', href: 'cause.html'      },
+    { label: 'What Can I Do?', href: 'what-can-i-do.html' },
 
   ];
 
